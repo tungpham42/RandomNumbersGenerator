@@ -25,12 +25,12 @@ if (isset($_POST['min']) && isset($_POST['max']) && isset($_POST['quantity']) &&
   }
   $results = implode(", ",$results_array);
 ?>
-    <div class="jumbotron">
+    <div class="jumbotron m-0">
       <div class="container">
 <?php
 if (($max - $min + 1) >= $quantity):
 ?>
-        <div class="display-4"><?php echo $results; ?></div>
+        <div class="display-4 text-primary"><?php echo $results; ?></div>
 <?php
 elseif (($max - $min + 1) < $quantity):
 ?>

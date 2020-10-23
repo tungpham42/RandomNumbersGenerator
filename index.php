@@ -11,16 +11,16 @@
       <div class="form-group">
         <h2>Range</h2>
         <label for="min">Min</label>
-        <input class="form-control" id="min" name="min" value="<?php echo (isset($_POST['min'])) ? $_POST['min']: '1'; ?>" />
+        <input class="form-control form-control-lg" id="min" name="min" value="<?php echo (isset($_POST['min'])) ? $_POST['min']: '1'; ?>" />
         <label for="max">Max</label>
-        <input class="form-control" id="max" name="max" value="<?php echo (isset($_POST['max'])) ? $_POST['max']: '42'; ?>" />
+        <input class="form-control form-control-lg" id="max" name="max" value="<?php echo (isset($_POST['max'])) ? $_POST['max']: '42'; ?>" />
       </div>
       <div class="form-group">
         <h2>How Many?</h2>
         <label for="quantity">Quantity</label>
-        <input class="form-control" id="quantity" name="quantity" value="<?php echo (isset($_POST['quantity'])) ? $_POST['quantity']: '5'; ?>" />
+        <input class="form-control form-control-lg" id="quantity" name="quantity" value="<?php echo (isset($_POST['quantity'])) ? $_POST['quantity']: '5'; ?>" />
         <label for="sort">Sort</label>
-        <select class="custom-select" id="sort" name="sort">
+        <select class="form-control form-control-lg custom-select" id="sort" name="sort">
           <option <?php echo (isset($_POST['sort']) && $_POST['sort'] == 'asc') ? 'selected': ''; ?> value="asc">Lowest to Highest</option>
           <option <?php echo (isset($_POST['sort']) && $_POST['sort'] == 'desc') ? 'selected': ''; ?> value="desc">Highest to Lowest</option>
           <option <?php echo (isset($_POST['sort']) && $_POST['sort'] == 'none') ? 'selected': ''; ?> value="none">Do not sort</option>
