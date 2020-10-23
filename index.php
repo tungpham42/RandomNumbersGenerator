@@ -11,11 +11,11 @@
       <div class="form-group">
         <h2>Range</h2>
         <div class="row">
-          <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+          <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mt-4">
             <label for="min">Min</label>
             <input class="form-control form-control-lg" id="min" name="min" value="<?php echo (isset($_POST['min'])) ? $_POST['min']: '1'; ?>" />
           </div>
-          <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+          <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mt-4">
             <label for="max">Max</label>
             <input class="form-control form-control-lg" id="max" name="max" value="<?php echo (isset($_POST['max'])) ? $_POST['max']: '42'; ?>" />
           </div>
@@ -24,11 +24,15 @@
       <div class="form-group">
         <h2>How Many?</h2>
         <div class="row">
-          <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+          <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mt-4">
             <label for="quantity">Quantity</label>
             <input class="form-control form-control-lg" id="quantity" name="quantity" value="<?php echo (isset($_POST['quantity'])) ? $_POST['quantity']: '5'; ?>" />
           </div>
-          <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6 mt-4">
+            <label for="divider">Divider</label>
+            <input class="form-control form-control-lg" id="divider" name="divider" value="<?php echo (isset($_POST['divider'])) ? $_POST['divider']: ', '; ?>" />
+          </div>
+          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6 mt-4">
             <label for="sort">Sort</label>
             <select class="form-control form-control-lg custom-select" id="sort" name="sort" style="height: 48px;">
               <option <?php echo (isset($_POST['sort']) && $_POST['sort'] == 'asc') ? 'selected': ''; ?> value="asc">Lowest to Highest</option>
@@ -37,11 +41,11 @@
             </select>
           </div>
       </div>
-      <div class="row mt-4">
-        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mt-4">
           <button type="button" class="btn btn-lg btn-secondary btn-block" onclick="doClear();">Clear</button>
         </div>
-        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mt-4">
           <button type="button" name="calculate" class="btn btn-lg btn-primary btn-block" onclick="doCalculate();">Calculate</button>
         </div>
       </div>
@@ -57,6 +61,7 @@
           min : $('#min').val(),
           max : $('#max').val(),
           quantity : $('#quantity').val(),
+          divider : $('#divider').val().replace(" ", "&nbsp;"),
           sort : $('#sort').val(),
         },
         dataType: "html"
