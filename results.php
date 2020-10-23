@@ -9,7 +9,7 @@ if (isset($_POST['min']) && isset($_POST['max']) && isset($_POST['quantity']) &&
   $quantity = $_POST['quantity'];
   $sort = $_POST['sort'];
   $has_error = false;
-  while ((count($results_array) < $quantity) && (($max - $min + 1) >= $quantity)) {
+  while ((count($results_array) < $quantity) && (($max - $min + 1) > $quantity)) {
     array_push($results_array, rand($min, $max));
     $results_array = array_unique($results_array);
   }
@@ -28,11 +28,11 @@ if (isset($_POST['min']) && isset($_POST['max']) && isset($_POST['quantity']) &&
     <div class="jumbotron">
       <div class="container">
 <?php
-if (($max - $min + 1) >= $quantity):
+if (($max - $min + 1) > $quantity):
 ?>
         <div class="display-4"><?php echo $results; ?></div>
 <?php
-elseif (($max - $min + 1) < $quantity):
+elseif (($max - $min + 1) <= $quantity):
 ?>
         <div class="lead text-danger">Cannot generate more numbers than exist in the range.</div>
 <?
