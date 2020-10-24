@@ -46,7 +46,7 @@
           <button type="button" class="btn btn-lg btn-secondary btn-block" onclick="doClear();">Clear</button>
         </div>
         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mt-4">
-          <button type="button" name="calculate" class="btn btn-lg btn-primary btn-block" onclick="doCalculate();"><span class="spinner-grow spinner-grow-sm d-none" role="status" aria-hidden="true"></span> Calculate</button>
+          <button type="button" name="calculate" class="btn btn-lg btn-primary btn-block" onclick="doCalculate();"><span class="spinner-grow spinner-grow-sm position-absolute d-none" role="status" aria-hidden="true" style="top: 1rem; left: auto; right: calc(50% + 3rem);"></span> Calculate</button>
         </div>
       </div>
     </div>
