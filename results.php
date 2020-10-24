@@ -1,6 +1,7 @@
 <?php
 error_reporting(-1);
 ini_set('display_errors', 'On');
+sleep(2);
 if (isset($_POST['min']) && isset($_POST['max']) && isset($_POST['quantity']) && isset($_POST['divider']) && isset($_POST['sort'])) {
   $results_array = array();
   $results = '';
