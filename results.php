@@ -36,7 +36,7 @@ if (isset($_POST['min']) && isset($_POST['max']) && isset($_POST['quantity']) &&
 if ((($max - $min + 1) >= $quantity) || $allow_dup == 'yes'):
 ?>
         <div id="results-text" class="display-4 text-primary text-wrap text-break"><?php echo $results; ?></div>
-        <button type="button" class="btn btn-primary btn-sm float-right" id="copy-button" data-clipboard-target="#results-text"><i class="fas fa-copy"></i> Copy</button>
+        <button type="button" class="btn btn-primary float-right" id="copy-button" data-clipboard-target="#results-text"><i class="fas fa-copy"></i> Copy</button>
 <?php
 elseif ((($max - $min + 1) < $quantity) || $allow_dup == 'no'):
 ?>
